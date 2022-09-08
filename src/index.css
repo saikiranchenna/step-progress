@@ -1,13 +1,82 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  font-size: 14px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.circle {
+  width: 29px;
+  height: 29px;
+  line-height: 25px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+.stepWrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.stepBlock .circleWrapper {
+  padding: 0px 20px;
+  position: relative;
+}
+
+.selected .circle {
+  color: black;
+  background-color: white;
+  border-color: green;
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: green;
+  margin: auto;
+  z-index: -1;
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after {
+  height: 3px;
+}
+
+.stepBlock:not(:last-child).selected > .circleWrapper::after, .stepBlock:not(:last-child).selected ~ .stepBlock:not(:last-child) > .circleWrapper::after {
+  height: 2px;
+  opacity: 0.6;
+}
+
+.primaryButton {
+  padding: 10px 25px;
+  background-color: green;
+  border: none;
+  margin: 10px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
 }
