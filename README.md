@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and sponsored by FancyQRs.
+An [AI-powered QR code generator](https://fancyqrs.com) that seamlessly transforms text or URLs into dynamic, high-quality QR codes for diverse applications.
 
 ## Available Scripts
 
